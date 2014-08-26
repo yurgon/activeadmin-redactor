@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redactor</title>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
+  <%= stylesheet_link_tag 'activeadmin-redactor' %>
+</head>
+
+<body>
+  <textarea id="redactor" name="content"></textarea>
+
+  <%= javascript_include_tag 'activeadmin-redactor' %>
+  <script type="text/javascript">
+    $(function()
+    {
+      $('#redactor').redactor({
+        focus: true
+      });
+    });
+  </script>
+</body>
+</html>
