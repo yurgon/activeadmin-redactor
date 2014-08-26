@@ -8,7 +8,9 @@
 </head>
 
 <body>
-  <textarea id="redactor" name="content"></textarea>
+  <textarea id="redactor" name="content">
+    <%= resource.redactorable %>
+  </textarea>
 
   <%= javascript_include_tag 'activeadmin-redactor' %>
   <script type="text/javascript">
