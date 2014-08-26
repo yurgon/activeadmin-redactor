@@ -2,23 +2,26 @@
 
 TODO: Write a gem description
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'activeadmin-redactor'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install activeadmin-redactor
-
 ## Usage
 
-TODO: Write usage instructions here
+### Add it to your Gemfile
+
+```ruby
+gem 'activeadmin-redactor'
+```
+
+### Configure your ActiveAdmin Resource
+
+```ruby
+ActiveAdmin.register Page do
+  redactorable # creates the controller action which handles the editor
+
+  index do
+    redactorable_edit_icon # inserts an edit icon / link
+    # other columns...
+  end
+end
+```
 
 ## Contributing
 
