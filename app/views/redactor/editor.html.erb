@@ -8,9 +8,11 @@
 </head>
 
 <body>
-  <textarea id="redactor" name="content">
-    <%= resource.redactorable %>
-  </textarea>
+  <%= form_for(resource, url: resource_path(resource)) do |f| %>
+    <%= f.submit %>
+    <%= f.text_area :redactorable, id: 'redactor' %>
+    <%= f.submit %>
+  <% end %>
 
   <%= javascript_include_tag 'activeadmin-redactor' %>
   <script type="text/javascript">
