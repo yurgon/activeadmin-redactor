@@ -37,4 +37,20 @@ describe Activeadmin::Redactor::RedactorOpts do
       end
     end
   end
+
+  describe '#minheight' do
+    context 'no options passed' do
+      let(:options) {Hash.new}
+      it 'returns false' do
+        expect(subject.minheight).to eql(false)
+      end
+    end
+
+    context 'options passed' do
+      let(:options) {{minheight: 'window.innerHeight - 100'}}
+      it 'returns unmodified string' do
+        expect(subject.minheight).to eql('window.innerHeight - 100')
+      end
+    end
+  end
 end

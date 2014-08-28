@@ -13,6 +13,10 @@ module Activeadmin
         opts[:css] || []
       end
 
+      def minheight
+        opts[:minheight] || false
+      end
+
       private
 
       attr_reader :opts

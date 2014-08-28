@@ -20,7 +20,8 @@
     {
       $('#redactor').redactor({
         iframe: <%= @redactor_opts.iframe %>,
-        css: <%=raw redactor_css(@redactor_opts.css) %>
+        css: <%=raw redactor_css(@redactor_opts.css) %>,
+        minHeight: window.innerHeight - 100,
       });
     });
   </script>

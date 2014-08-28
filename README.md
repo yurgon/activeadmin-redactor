@@ -53,6 +53,15 @@ ActiveAdmin.register Page do
 end
 ```
 
+#### minHeight
+Default setting is false
+
+```ruby
+ActiveAdmin.register Page do
+  redactorable redactor: {minheight: 200}
+end
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/activeadmin-redactor/fork )
