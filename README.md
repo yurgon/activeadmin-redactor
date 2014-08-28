@@ -23,11 +23,23 @@ ActiveAdmin.register Page do
 end
 ```
 
-### Optional Redactor Customization
+### Optional View Port Customization
 #### Stylesheets
+Default setting is none
+
 ```ruby
 ActiveAdmin.register Page do
   redactorable stylesheets: ["fonts", "application"]
+end
+```
+
+### Optional Redactor Customization
+#### [iframe](http://imperavi.com/redactor/examples/iframe/)
+Default setting is false
+
+```ruby
+ActiveAdmin.register Page do
+  redactorable redactor: {iframe: true}
 end
 ```
 
