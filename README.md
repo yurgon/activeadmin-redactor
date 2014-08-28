@@ -23,6 +23,14 @@ ActiveAdmin.register Page do
 end
 ```
 
+### Optional Redactor Customization
+#### Stylesheets
+```ruby
+ActiveAdmin.register Page do
+  redactorable stylesheets: ["fonts", "application"]
+end
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/activeadmin-redactor/fork )

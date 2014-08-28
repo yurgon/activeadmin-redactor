@@ -5,9 +5,9 @@ require 'rails/engine'
 module Activeadmin
   module Redactor
     module ControllerActions
-      def redactorable
+      def redactorable(opts)
         member_action :redactor do
-
+          @stylesheets = (opts[:stylesheets] || []).unshift("activeadmin-redactor")
           render 'redactor/editor', layout: false
         end
       end
