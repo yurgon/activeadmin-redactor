@@ -1,6 +1,8 @@
 # Activeadmin::Redactor
 
-TODO: Write a gem description
+Limited subsection of [redactor](http://imperavi.com/redactor/) options.
+Currently no plans to make this feature complete (supporting all the options from the API).
+Feel free to add options and submit a pull request if missing one you require.
 
 ## Usage
 
@@ -40,6 +42,14 @@ Default setting is false
 ```ruby
 ActiveAdmin.register Page do
   redactorable redactor: {iframe: true}
+end
+```
+#### [css](http://imperavi.com/redactor/examples/css/)
+Default setting is none
+
+```ruby
+ActiveAdmin.register Page do
+  redactorable redactor: {css: ['application', 'override']}
 end
 ```
 

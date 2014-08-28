@@ -20,6 +20,7 @@
     {
       $('#redactor').redactor({
         iframe: <%= @redactor_opts.iframe %>,
+        css: <%=raw redactor_css(@redactor_opts.css) %>
       });
     });
   </script>

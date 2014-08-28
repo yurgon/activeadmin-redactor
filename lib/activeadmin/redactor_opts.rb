@@ -9,6 +9,10 @@ module Activeadmin
         opts[:iframe] == true
       end
 
+      def css
+        opts[:css] || []
+      end
+
       private
 
       attr_reader :opts
