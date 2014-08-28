@@ -27,11 +27,29 @@ end
 
 ### Optional View Port Customization
 #### Stylesheets
-Default setting is none
+Default setting is 'activeadmin-redactor'
 
 ```ruby
 ActiveAdmin.register Page do
   redactorable stylesheets: ["fonts", "application"]
+end
+```
+
+#### Layout
+Default setting is 'redactor'
+
+```ruby
+ActiveAdmin.register Page do
+  redactorable layout: ["foobar"]
+end
+```
+
+#### Tempate
+Default setting is 'redactor/editor'
+
+```ruby
+ActiveAdmin.register Page do
+  redactorable template: ["redactor/editor"]
 end
 ```
 

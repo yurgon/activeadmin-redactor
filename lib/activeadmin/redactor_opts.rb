@@ -1,10 +1,8 @@
+require_relative 'options'
+
 module Activeadmin
   module Redactor
-    class RedactorOpts
-      def initialize(opts={})
-        @opts = opts
-      end
-
+    class RedactorOpts < Options
       def iframe
         opts[:iframe] == true
       end
@@ -16,10 +14,6 @@ module Activeadmin
       def minheight
         opts[:minheight] || false
       end
-
-      private
-
-      attr_reader :opts
     end
   end
 end

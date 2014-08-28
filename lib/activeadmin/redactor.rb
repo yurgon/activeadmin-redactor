@@ -1,16 +1,17 @@
 require 'activeadmin/redactor/version'
 require 'activeadmin/redactor_opts'
+require 'activeadmin/viewport_opts'
 require 'activeadmin'
 require 'rails/engine'
 
 module Activeadmin
   module Redactor
     module ControllerActions
-      def redactorable(opts={})
+      def redactorable(options={})
         member_action :redactor do
-          @redactor_opts = RedactorOpts.new(opts[:redactor])
-          @stylesheets = (opts[:stylesheets] || []).unshift("activeadmin-redactor")
-          render 'redactor/editor', layout: 'redactor'
+          @viewport_opts = ViewportOpts.new(options)
+          @redactor_opts = RedactorOpts.new(options[:redactor])
+          render @viewport_opts.template, layout: @viewport_opts.layout
         end
       end
     end
