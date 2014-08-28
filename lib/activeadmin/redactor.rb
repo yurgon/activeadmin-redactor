@@ -10,7 +10,7 @@ module Activeadmin
         member_action :redactor do
           @redactor_opts = RedactorOpts.new(opts[:redactor])
           @stylesheets = (opts[:stylesheets] || []).unshift("activeadmin-redactor")
-          render 'redactor/editor', layout: false
+          render 'redactor/editor', layout: 'redactor'
         end
       end
     end

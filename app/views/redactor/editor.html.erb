@@ -1,29 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Redactor</title>
-  <meta charset="utf-8">
-  <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
-  <%= stylesheet_link_tag *@stylesheets %>
-</head>
-
-<body>
+<div id="viewport">
   <%= form_for(resource, url: resource_path(resource)) do |f| %>
     <%= f.submit %>
     <%= f.text_area :redactorable, id: 'redactor' %>
     <%= f.submit %>
   <% end %>
-
-  <%= javascript_include_tag 'activeadmin-redactor' %>
-  <script type="text/javascript">
-    $(function()
-    {
-      $('#redactor').redactor({
-        iframe: <%= @redactor_opts.iframe %>,
-        css: <%=raw redactor_css(@redactor_opts.css) %>,
-        minHeight: window.innerHeight - 100,
-      });
-    });
-  </script>
-</body>
-</html>
+</div>
