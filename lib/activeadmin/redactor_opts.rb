@@ -4,15 +4,15 @@ module Activeadmin
   module Redactor
     class RedactorOpts < Options
       def iframe
-        opts[:iframe] == true
+        opts[:iframe] === true
       end
 
       def fullpage
-        opts[:fullpage] == true
+        opts[:fullpage] === true
       end
 
       def focus
-        opts[:focus] == true
+        opts[:focus] === true
       end
 
       def css
