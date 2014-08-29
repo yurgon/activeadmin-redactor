@@ -8,8 +8,8 @@
 </head>
 
 <body>
+  <%= render "layouts/redactor_header" %>
   <%= yield %>
-</body>
   <%= javascript_include_tag 'jquery', 'jquery_ujs', 'activeadmin-redactor' %>
   <script type="text/javascript">
     $(function() {
@@ -23,4 +23,6 @@
       });
     });
   </script>
+  <%= render "layouts/redactor_footer" %>
+</body>
 </html>
