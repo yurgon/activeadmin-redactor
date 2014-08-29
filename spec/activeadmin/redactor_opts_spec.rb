@@ -20,6 +20,22 @@ describe Activeadmin::Redactor::RedactorOpts do
     end
   end
 
+  describe '#fullpage' do
+    context 'no options passed' do
+      let(:options) {Hash.new}
+      it 'returns false' do
+        expect(subject.fullpage).to eql(false)
+      end
+    end
+
+    context 'options passed' do
+      let(:options) {{fullpage: true}}
+      it 'returns true' do
+        expect(subject.fullpage).to eql(true)
+      end
+    end
+  end
+
   describe '#css' do
     context 'no options passed' do
       let(:options) {Hash.new}

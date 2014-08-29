@@ -62,6 +62,14 @@ ActiveAdmin.register Page do
   redactorable redactor: {iframe: true}
 end
 ```
+#### [fullpage](http://imperavi.com/redactor/examples/fullpage/)
+Default setting is false
+
+```ruby
+ActiveAdmin.register Page do
+  redactorable redactor: {fullpage: true}
+end
+```
 #### [css](http://imperavi.com/redactor/examples/css/)
 Default setting is none
 

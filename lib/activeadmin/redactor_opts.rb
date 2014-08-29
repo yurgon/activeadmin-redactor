@@ -7,6 +7,10 @@ module Activeadmin
         opts[:iframe] == true
       end
 
+      def fullpage
+        opts[:fullpage] == true
+      end
+
       def css
         opts[:css] || []
       end
