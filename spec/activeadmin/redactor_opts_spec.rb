@@ -53,4 +53,20 @@ describe Activeadmin::Redactor::RedactorOpts do
       end
     end
   end
+
+  describe '#imageupload' do
+    context 'no options passed' do
+      let(:options) {Hash.new}
+      it 'returns false' do
+        expect(subject.imageupload).to eql(false)
+      end
+    end
+
+    context 'options passed' do
+      let(:options) {{imageupload: '/foo/bar/path'}}
+      it 'returns unmodified string' do
+        expect(subject.imageupload).to eql('/foo/bar/path')
+      end
+    end
+  end
 end

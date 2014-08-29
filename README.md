@@ -80,6 +80,15 @@ ActiveAdmin.register Page do
 end
 ```
 
+#### imageUpload
+Default setting is false
+
+```ruby
+ActiveAdmin.register Page do
+  redactorable redactor: {imageupload: /foo/bar/path}
+end
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/activeadmin-redactor/fork )

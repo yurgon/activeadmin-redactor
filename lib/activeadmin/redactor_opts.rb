@@ -14,6 +14,10 @@ module Activeadmin
       def minheight
         opts[:minheight] || false
       end
+
+      def imageupload
+        opts[:imageupload] || false
+      end
     end
   end
 end
