@@ -36,6 +36,22 @@ describe Activeadmin::Redactor::RedactorOpts do
     end
   end
 
+  describe '#focus' do
+    context 'no options passed' do
+      let(:options) {Hash.new}
+      it 'returns false' do
+        expect(subject.focus).to eql(false)
+      end
+    end
+
+    context 'options passed' do
+      let(:options) {{focus: true}}
+      it 'returns true' do
+        expect(subject.focus).to eql(true)
+      end
+    end
+  end
+
   describe '#css' do
     context 'no options passed' do
       let(:options) {Hash.new}

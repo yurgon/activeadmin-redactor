@@ -11,6 +11,10 @@ module Activeadmin
         opts[:fullpage] == true
       end
 
+      def focus
+        opts[:focus] == true
+      end
+
       def css
         opts[:css] || []
       end

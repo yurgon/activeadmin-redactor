@@ -54,6 +54,14 @@ end
 ```
 
 ### Optional Redactor Customization
+#### [focus](http://imperavi.com/redactor/examples/focus/)
+Default setting is false
+
+```ruby
+ActiveAdmin.register Page do
+  redactorable redactor: {focus: true}
+end
+```
 #### [iframe](http://imperavi.com/redactor/examples/iframe/)
 Default setting is false
 
