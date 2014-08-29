@@ -12,13 +12,12 @@
 </body>
   <%= javascript_include_tag 'activeadmin-redactor' %>
   <script type="text/javascript">
-    $(function()
-    {
+    $(function() {
       $('#redactor').redactor({
         iframe: <%= @redactor_opts.iframe %>,
         css: <%=raw redactor_css(@redactor_opts.css) %>,
-        minHeight: window.innerHeight - 100,
-        imageUpload: <%= @redactor_opts.imageupload %>,
+        minHeight: <%= @redactor_opts.minheight %>,
+        imageUpload: '<%= @redactor_opts.imageupload %>',
       });
     });
   </script>
