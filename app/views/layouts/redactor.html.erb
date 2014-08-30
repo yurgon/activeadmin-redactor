@@ -5,11 +5,6 @@
   <meta charset="utf-8">
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag *@viewport_opts.stylesheets %>
-</head>
-
-<body>
-  <%= render "layouts/redactor_header" %>
-  <%= yield %>
   <%= javascript_include_tag 'jquery', 'jquery_ujs', 'activeadmin-redactor' %>
   <script type="text/javascript">
     $(function() {
@@ -23,6 +18,11 @@
       });
     });
   </script>
+</head>
+
+<body>
+  <%= render "layouts/redactor_header" %>
+  <%= yield %>
   <%= render "layouts/redactor_footer" %>
 </body>
 </html>
