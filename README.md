@@ -89,7 +89,7 @@ Default setting is false
 Default setting is false
 
 ```ruby
-  redactorable redactor: {imageupload: /foo/bar/path}
+  redactorable redactor: {imageupload: '/foo/bar/path'}
 ```
 
 ## Contributing
