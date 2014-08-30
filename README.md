@@ -30,34 +30,26 @@ end
 Default setting is 'activeadmin-redactor'
 
 ```ruby
-ActiveAdmin.register Page do
   redactorable stylesheets: ["fonts", "application"]
-end
 ```
 #### Javascripts
 Default setting is 'jquery', 'jquery_ujs', 'activeadmin-redactor'
 ```ruby
-ActiveAdmin.register Page do
   redactorable javascripts: ["textdirection.js"]
-end
 ```
 
 #### Layout
 Default setting is 'redactor'
 
 ```ruby
-ActiveAdmin.register Page do
   redactorable layout: ["foobar"]
-end
 ```
 
 #### Tempate
 Default setting is 'redactor/editor'
 
 ```ruby
-ActiveAdmin.register Page do
   redactorable template: ["redactor/editor"]
-end
 ```
 
 ### Optional Redactor Customization
@@ -65,51 +57,39 @@ end
 Default setting is false
 
 ```ruby
-ActiveAdmin.register Page do
   redactorable redactor: {focus: true}
-end
 ```
 #### [iframe](http://imperavi.com/redactor/examples/iframe/)
 Default setting is false
 
 ```ruby
-ActiveAdmin.register Page do
   redactorable redactor: {iframe: true}
-end
 ```
 #### [fullpage](http://imperavi.com/redactor/examples/fullpage/)
 Default setting is false
 
 ```ruby
-ActiveAdmin.register Page do
   redactorable redactor: {fullpage: true}
-end
 ```
 #### [css](http://imperavi.com/redactor/examples/css/)
 Default setting is none
 
 ```ruby
-ActiveAdmin.register Page do
   redactorable redactor: {css: ['application', 'override']}
-end
 ```
 
 #### minHeight
 Default setting is false
 
 ```ruby
-ActiveAdmin.register Page do
   redactorable redactor: {minheight: 200}
-end
 ```
 
 #### imageUpload
 Default setting is false
 
 ```ruby
-ActiveAdmin.register Page do
   redactorable redactor: {imageupload: /foo/bar/path}
-end
 ```
 
 ## Contributing
