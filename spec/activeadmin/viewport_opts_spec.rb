@@ -20,6 +20,24 @@ describe Activeadmin::Redactor::ViewportOpts do
     end
   end
 
+  describe '#javascripts' do
+    context 'no options passed' do
+      let(:options) {Hash.new}
+      it 'returns array with required js elements' do
+        expect(subject.javascripts).
+          to eql(['jquery', 'jquery_ujs', 'activeadmin-redactor'])
+      end
+    end
+
+    context 'options passed' do
+      let(:options) {{javascripts: ['foo.js', 'bar.js']}}
+      it 'returns javascripts with required js elements prepended' do
+        expect(subject.javascripts).
+          to eql(%w(jquery jquery_ujs activeadmin-redactor foo.js bar.js))
+      end
+    end
+  end
+
   describe '#layout' do
     context 'no options passed' do
       let(:options) {Hash.new}

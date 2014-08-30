@@ -6,6 +6,7 @@ module Activeadmin
       DEFAULT_LAYOUT = 'redactor'
       DEFAULT_TEMPLATE = 'redactor/editor'
       DEFAULT_STYLESHEET = 'activeadmin-redactor'
+      DEFAULT_JAVASCRIPTS = %w(jquery jquery_ujs activeadmin-redactor)
 
       def layout
         opts[:layout] || DEFAULT_LAYOUT
@@ -17,6 +18,10 @@ module Activeadmin
 
       def stylesheets
         (opts[:stylesheets] || []).unshift(DEFAULT_STYLESHEET)
+      end
+
+      def javascripts
+        (opts[:javascripts] || []).unshift(*DEFAULT_JAVASCRIPTS)
       end
     end
   end

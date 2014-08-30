@@ -34,6 +34,13 @@ ActiveAdmin.register Page do
   redactorable stylesheets: ["fonts", "application"]
 end
 ```
+#### Javascripts
+Default setting is 'jquery', 'jquery_ujs', 'activeadmin-redactor'
+```ruby
+ActiveAdmin.register Page do
+  redactorable javascripts: ["textdirection.js"]
+end
+```
 
 #### Layout
 Default setting is 'redactor'
