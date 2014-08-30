@@ -101,4 +101,21 @@ describe Activeadmin::Redactor::RedactorOpts do
       end
     end
   end
+
+  describe '#plugins' do
+    context 'no options passed' do
+      let(:options) {Hash.new}
+      it 'returns empty array' do
+        expect(subject.plugins).to eql([])
+      end
+    end
+
+    context 'options passed' do
+      let(:options) {{plugins: ['admin/fontfamily.js']}}
+      it 'returns unmodified array' do
+        expect(subject.plugins).to eql(['admin/fontfamily.js'])
+      end
+    end
+  end
+
 end

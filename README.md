@@ -92,6 +92,13 @@ Default setting is false
   redactorable redactor: {imageupload: '/foo/bar/path'}
 ```
 
+#### [plugins](http://imperavi.com/redactor/examples/plugin-create/)
+Default setting is none
+
+```ruby
+  redactorable redactor: {plugins: ['admin/fontfamily.js']}
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/activeadmin-redactor/fork )

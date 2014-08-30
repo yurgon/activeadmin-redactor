@@ -15,6 +15,7 @@
         css: <%=raw redactor_css(@redactor_opts.css) %>,
         minHeight: <%= @redactor_opts.minheight %>,
         imageUpload: '<%= @redactor_opts.imageupload %>',
+        plugins: <%=raw @redactor_opts.plugins %>,
       });
     });
   </script>

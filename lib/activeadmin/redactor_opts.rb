@@ -26,6 +26,10 @@ module Activeadmin
       def imageupload
         opts[:imageupload] || false
       end
+
+      def plugins
+        opts[:plugins] || []
+      end
     end
   end
 end
